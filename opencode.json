@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/SparkLLM/Spark-X2.5-4B:latest",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "SparkLLM/Spark-X2.5-4B:latest": {
+          "name": "Spark X2.5-4B",
+          "reasoning": false,
+          "tools": false,
+          "options": {
+            "num_ctx": 65536,
+            "num_predict": 512
+          }
+        }
+      }
+    }
+  }
+}
