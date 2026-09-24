@@ -51,6 +51,15 @@ opencode_test/
     └── .venv/
         └── Scripts/
             └── python.exe
+└── compliance_test/  # Compliance audit (Prompt 5: completed)
+    ├── COMPLIANCE_AUDIT.md
+    ├── csv_reader.py
+    ├── csv_parser.py
+    ├── csv_processor.py
+    ├── csv_reporter.py
+    ├── csv_validator.py
+    ├── run_pipeline.py
+    └── sample_data.csv
 ```
 
 ## Key Files
@@ -105,6 +114,19 @@ The completed Prompt 4 web dashboard artifacts:
 - `TEST_RESULTS.md` — Validation test outcomes with all tests passing.
 - `README.md` — Dashboard documentation and usage guide.
 
+### `compliance_test/`
+The completed Prompt 5 compliance audit artifacts:
+- `csv_reader.py` — Reads CSV files into structured dictionary data.
+- `csv_parser.py` — Parses data into type-safe int/float/str/bool records.
+- `csv_processor.py` — Filters and transforms parsed data while preserving types.
+- `csv_validator.py` — Validates records for type consistency and integrity.
+- `csv_reporter.py` — Generates compliance reports and summary statistics.
+- `run_pipeline.py` — Orchestrates the five modules and generates COMPLIANCE_AUDIT.md.
+- `COMPLIANCE_AUDIT.md` — Compliance audit report with verification results.
+- `sample_data.csv` — Sample CSV data for pipeline testing.
+
+All five modules use type hints, logging, and English only. Pipeline validation: all 12 records passed with **compliant** status.
+
 ## Architecture Review (Prompt 2)
 
 The completed Prompt 2 analysis is available in the `architecture_review/` directory:
@@ -140,6 +162,23 @@ The completed Prompt 4 autonomous coding web dashboard is available in the `loca
 | `README.md` | Dashboard documentation, API endpoints, and usage guide. |
 
 All validation tests passed, including system metrics collection, Ollama server status check, and API endpoint accessibility. The web server starts and serves the dashboard correctly on port 5000.
+
+## Compliance Audit (Prompt 5)
+
+The completed Prompt 5 compliance audit is available in the `compliance_test/` directory:
+
+| Document | Description |
+| --- | --- |
+| `csv_reader.py` | CSV file reader with type-safe dictionary output. |
+| `csv_parser.py` | Type conversion parser (int, float, str, bool) with edge case handling. |
+| `csv_processor.py` | Filtering and type-preserving transformation of parsed data. |
+| `csv_validator.py` | Validation of records for type consistency and integrity. |
+| `csv_reporter.py` | Compliance report generation with summary statistics. |
+| `run_pipeline.py` | Pipeline orchestration script generating COMPLIANCE_AUDIT.md. |
+| `COMPLIANCE_AUDIT.md` | Compliance audit report — all 12 records compliant. |
+| `sample_data.csv` | Sample CSV data for pipeline testing. |
+
+All five modules use type hints, logging, and English only. The pipeline processed 12 records, all passed validation, and generated a **compliant** status report.
 
 ## Usage
 

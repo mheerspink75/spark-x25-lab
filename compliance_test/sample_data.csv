@@ -1,0 +1,13 @@
+id,category,value,description
+1,bug,150,High error rate on login
+2,enhancement,80,Improve UI responsiveness
+3,documentation,200,Update API docs
+4,security,300,Verify encryption compliance
+5,bug,-50,Data corruption issue
+6,enhancement,120,Add export feature
+7,documentation,10,Review documentation
+8,security,400,Update security policy
+9,bug,75,Timeout on batch processing
+10,enhancement,200,Improve performance
+11,documentation,50,Add changelog entry
+12,security,180,Review access controls
