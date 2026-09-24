@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "High error rate on login",
+    "description": "Users experience frequent login errors. Investigating the authentication endpoint for bugs.",
+    "category": "bug",
+    "metadata": {"severity": "high", "status": "open"}
+  },
+  {
+    "id": 2,
+    "title": "Improve UI responsiveness",
+    "description": "Enhance the responsiveness of the user interface for faster interaction.",
+    "category": "enhancement",
+    "metadata": {"severity": "medium", "status": "open"}
+  },
+  {
+    "id": 3,
+    "title": "Update API documentation",
+    "description": "Add comprehensive documentation for the new REST API endpoints.",
+    "category": "documentation",
+    "metadata": {"severity": "low", "status": "open"}
+  },
+  {
+    "id": 4,
+    "title": "Verify encryption compliance",
+    "description": "Check that sensitive data is properly encrypted and secure against potential vulnerabilities.",
+    "category": "security",
+    "metadata": {"severity": "critical", "status": "open"}
+  },
+  {
+    "id": 5,
+    "title": "Data corruption issue",
+    "description": "Files are being corrupted during batch processing. This is a critical defect.",
+    "category": "bug",
+    "metadata": {"severity": "critical", "status": "open"}
+  },
+  {
+    "id": 6,
+    "title": "Add export feature",
+    "description": "Implement a new export functionality to export data to CSV format.",
+    "category": "enhancement",
+    "metadata": {"severity": "medium", "status": "open"}
+  },
+  {
+    "id": 7,
+    "title": "Review documentation",
+    "description": "Review and update the developer documentation to reflect recent changes.",
+    "category": "documentation",
+    "metadata": {"severity": "low", "status": "open"}
+  },
+  {
+    "id": 8,
+    "title": "Update security policy",
+    "description": "Review and update the security policy to address new compliance requirements.",
+    "category": "security",
+    "metadata": {"severity": "high", "status": "open"}
+  },
+  {
+    "id": 9,
+    "title": "Timeout on batch processing",
+    "description": "Batch processing operations are timing out. Investigate for performance bugs.",
+    "category": "bug",
+    "metadata": {"severity": "high", "status": "open"}
+  },
+  {
+    "id": 10,
+    "title": "Improve performance",
+    "description": "Optimize performance of the main application for better execution speed.",
+    "category": "enhancement",
+    "metadata": {"severity": "medium", "status": "open"}
+  },
+  {
+    "id": 11,
+    "title": "Add changelog entry",
+    "description": "Document the recent changes and add a changelog entry for tracking.",
+    "category": "documentation",
+    "metadata": {"severity": "low", "status": "open"}
+  },
+  {
+    "id": 12,
+    "title": "Review access controls",
+    "description": "Review and verify access controls to ensure data security and access management.",
+    "category": "security",
+    "metadata": {"severity": "high", "status": "open"}
+  }
+]
