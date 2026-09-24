@@ -60,7 +60,7 @@ opencode_test/
     ├── csv_validator.py
     ├── run_pipeline.py
     └── sample_data.csv
-└── github_issue_triage/  # GitHub issue triage (Prompt 2: completed)
+└── github_issue_triage/  # GitHub issue triage (Prompt 6: completed)
     ├── main.py
     ├── README.md
     ├── requirements.txt
@@ -204,6 +204,25 @@ The completed Prompt 5 compliance audit is available in the `compliance_test/` d
 | `sample_data.csv` | Sample CSV data for pipeline testing. |
 
 All five modules use type hints, logging, and English only. The pipeline processed 12 records, all passed validation, and generated a **compliant** status report.
+
+## GitHub Issue Triage (Prompt 6)
+
+The completed Prompt 6 real junior developer test is available in the `github_issue_triage/` directory:
+
+| Document | Description |
+| --- | --- |
+| `main.py` | Main application entry point that reads issues from the sample JSON file, categorizes them into bug, enhancement, documentation, and security categories, generates summary statistics, charts, and markdown reports. |
+| `requirements.txt` | Declares dependencies for the triage application. |
+| `run_tests.py` | Custom test runner that discovers and executes all `test_*` functions without requiring pytest.
+| `conftest.py` | Test configuration and fixtures for the triage test suite. |
+| `data/issues.json` | Sample issues dataset used for categorization and reporting. |
+| `src/issue_triage/` | Clean architecture package containing `models.py` (data models), `categorizer.py` (keyword-based issue classification), `charts.py` (matplotlib chart generation), `reporter.py` (markdown report generation), and `stats.py` (statistical summaries). |
+| `tests/` | Test suite with `test_categorizer.py`, `test_reporter.py`, and `test_stats.py` covering categorization, reporting, and statistics. |
+| `docs/design_decisions.md` | Design decisions documentation for the triage application. |
+| `charts/` | Generated category distribution and count charts (excluded from version control via `.gitignore`). |
+| `REPORT.md` | Generated markdown report with categorized issues, statistics, and charts. |
+
+All modules use type hints, logging, and English only. The custom test runner discovered and executed all 19 test functions, all passing successfully. The application correctly categorizes all sample issues into bug, enhancement, documentation, and security categories using clean architecture principles.
 
 ## Usage
 
