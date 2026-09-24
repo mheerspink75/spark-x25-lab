@@ -40,6 +40,9 @@ opencode_test/
         ├── PROJECT_INVENTORY.md
         ├── ARCHITECTURE_REVIEW.md
         └── RISK_ASSESSMENT.md
+└── opencode_optimizer/  # Optimization artifacts (Prompt 3: completed)
+    ├── proposed_config.json
+    └── optimization_report.md
 ```
 
 ## Key Files
@@ -82,6 +85,11 @@ The completed Prompt 2 architecture review documents:
 - `ARCHITECTURE_REVIEW.md` — Architecture analysis with Mermaid diagram, data flow, coupling, and boundaries.
 - `RISK_ASSESSMENT.md` — Top 5 risks with evidence and mitigation plans.
 
+### `opencode_optimizer/`
+The completed Prompt 3 optimization artifacts:
+- `proposed_config.json` — Optimized configuration addressing startup, context, VRAM, and throughput.
+- `optimization_report.md` — Detailed recommendations with expected benefit, tradeoffs, implementation steps, and rollback procedures.
+
 ## Architecture Review (Prompt 2)
 
 The completed Prompt 2 analysis is available in the `architecture_review/` directory:
@@ -93,6 +101,17 @@ The completed Prompt 2 analysis is available in the `architecture_review/` direc
 | `RISK_ASSESSMENT.md` | Top 5 risks with evidence from project files and detailed mitigation plans.
 
 All documents use evidence from the project files (`opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `memory_stress_test/*`, `README.md`, `LICENSE`) rather than assumptions.
+
+## Optimization (Prompt 3)
+
+The completed Prompt 3 refactoring optimization is available in the `opencode_optimizer/` directory:
+
+| Document | Description |
+| --- | --- |
+| `proposed_config.json` | Optimized OpenCode/Ollama configuration: reduced startup, improved context, minimized VRAM, maximized throughput. |
+| `optimization_report.md` | Detailed recommendations with expected benefit, tradeoffs, implementation steps, and rollback procedures. |
+
+All recommendations are evidence-based, citing current project files (`opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `memory_stress_test/*`, `README.md`, `LICENSE`). No existing files are modified automatically.
 
 ## Usage
 

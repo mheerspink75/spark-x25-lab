@@ -1,0 +1,41 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "version": "1.0",
+  "description": "Optimized OpenCode + Ollama configuration for reduced startup time, improved context utilization, minimized VRAM waste, and maximized coding throughput. Proposed for review; not applied to existing files.",
+
+  "startup": {
+    "ollama_host": "http://127.0.0.1:11434",
+    "host_timeout_seconds": 10,
+    "model_check_timeout_seconds": 5,
+    "pre_validate": true,
+    "parallel_precheck": true
+  },
+
+  "context": {
+    "num_ctx": 65536,
+    "num_predict": 512,
+    "context_compression": "enabled",
+    "context_checkpointing": "enabled",
+    "context_window_fallback": 32768
+  },
+
+  "memory_and_vram": {
+    "model_quantization": "int8",
+    "memory_efficient_mode": true,
+    "vram_aware": true,
+    "minimize_allocation": true
+  },
+
+  "throughput": {
+    "enable_tools": true,
+    "tool_scope": "coding_and_file",
+    "max_predict": 512,
+    "model_options": {
+      "num_ctx": 65536,
+      "num_predict": 512,
+      "reasoning": false,
+      "tools": true
+    }
+  }
+}
+<EOF>
