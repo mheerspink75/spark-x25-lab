@@ -60,6 +60,31 @@ opencode_test/
     ├── csv_validator.py
     ├── run_pipeline.py
     └── sample_data.csv
+└── github_issue_triage/  # GitHub issue triage (Prompt 2: completed)
+    ├── main.py
+    ├── README.md
+    ├── requirements.txt
+    ├── run_tests.py
+    ├── conftest.py
+    ├── data/
+    │   └── issues.json
+    ├── src/
+    │   └── issue_triage/
+    │       ├── __init__.py
+    │       ├── categorizer.py
+    │       ├── charts.py
+    │       ├── models.py
+    │       ├── reporter.py
+    │       └── stats.py
+    ├── tests/
+    │   ├── __init__.py
+    │   ├── test_categorizer.py
+    │   ├── test_reporter.py
+    │   └── test_stats.py
+    ├── docs/
+    │   └── design_decisions.md
+    ├── charts/
+    └── REPORT.md
 ```
 
 ## Key Files
@@ -127,7 +152,7 @@ The completed Prompt 5 compliance audit artifacts:
 
 All five modules use type hints, logging, and English only. Pipeline validation: all 12 records passed with **compliant** status.
 
-## Architecture Review (Prompt 2)
+## Architecture Review & GitHub Issue Triage (Prompt 2)
 
 The completed Prompt 2 analysis is available in the `architecture_review/` directory:
 
