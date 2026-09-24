@@ -60,6 +60,16 @@ opencode_test/
     ├── csv_validator.py
     ├── run_pipeline.py
     └── sample_data.csv
+└── comprehensive_audit/  # Comprehensive audit (Prompt 7: completed)
+    ├── PROJECT_INVENTORY.md
+    ├── CODE_QUALITY.md
+    ├── PERFORMANCE_REVIEW.md
+    ├── DEPENDENCY_AUDIT.md
+    ├── SECURITY_AUDIT.md
+    ├── ARCHITECTURE_REVIEW.md
+    ├── IMPLEMENTATION_ROADMAP.md
+    ├── CONTEXT_RETENTION_AUDIT.md
+    └── AUDIT_SUMMARY.md
 └── github_issue_triage/  # GitHub issue triage (Prompt 6: completed)
     ├── main.py
     ├── README.md
@@ -223,6 +233,24 @@ The completed Prompt 6 real junior developer test is available in the `github_is
 | `REPORT.md` | Generated markdown report with categorized issues, statistics, and charts. |
 
 All modules use type hints, logging, and English only. The custom test runner discovered and executed all 19 test functions, all passing successfully. The application correctly categorizes all sample issues into bug, enhancement, documentation, and security categories using clean architecture principles.
+
+## Comprehensive Audit (Prompt 7)
+
+The completed Prompt 7 stress test audit is available in the `comprehensive_audit/` directory:
+
+| Document | Description |
+| --- | --- |
+| `PROJECT_INVENTORY.md` | Inventory of all examined project files, grouped by purpose with responsibilities, dependencies, and unverifiable items. |
+| `CODE_QUALITY.md` | Evaluation of structure, readability, maintainability, duplication, error handling, logging, naming, typing, testing, and documentation. |
+| `PERFORMANCE_REVIEW.md` | Review of likely CPU, memory, disk I/O, network, startup, inference, context-management, and concurrency bottlenecks. |
+| `DEPENDENCY_AUDIT.md` | Inventory of direct dependencies with analysis of unused, duplicated, missing, or unnecessary dependencies. |
+| `SECURITY_AUDIT.md` | Review of configuration, credentials, permissions, subprocess, shell, file paths, networking, logging, API exposure, and input validation. |
+| `ARCHITECTURE_REVIEW.md` | Architecture analysis with Mermaid diagram, data flow, coupling, boundaries, failure points, and file citations. |
+| `IMPLEMENTATION_ROADMAP.md` | Recommendations organized by timeframe with evidence, affected files, benefit, risk, steps, validation, and rollback. |
+| `CONTEXT_RETENTION_AUDIT.md` | Verification of original instruction retention with PASS/FAIL/NOT VERIFIED checklist and evidence. |
+| `AUDIT_SUMMARY.md` | Executive summary with ten key findings, five high-priority recommendations, limitations, and links to all audit documents. |
+
+All nine audit documents use evidence from the project files rather than assumptions. The audit is a read-only exercise that does not modify, rename, move, or delete any existing files.
 
 ## Usage
 
