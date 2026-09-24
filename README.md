@@ -36,6 +36,10 @@ opencode_test/
                 ├── file_io_performance.png
                 ├── multithreaded_performance.png
                 └── summary_comparison.png
+    └── architecture_review/  # Architecture review (Prompt 2: completed)
+        ├── PROJECT_INVENTORY.md
+        ├── ARCHITECTURE_REVIEW.md
+        └── RISK_ASSESSMENT.md
 ```
 
 ## Key Files
@@ -69,6 +73,26 @@ Directory containing benchmark and test prompt files for:
 - Real junior developer testing
 - 65k context window stress test
 - Memory stress benchmarking (memory_stress_test/)
+
+> **Prompt 2 (Long Context Research):** Completed. The `architecture_review/` directory contains the full architecture analysis, including `PROJECT_INVENTORY.md` (file inventory), `ARCHITECTURE_REVIEW.md` (architecture with Mermaid diagram and data flow), and `RISK_ASSESSMENT.md` (top 5 risks with mitigation plans).
+
+### `architecture_review/`
+The completed Prompt 2 architecture review documents:
+- `PROJECT_INVENTORY.md` — File inventory grouped by purpose with dependencies.
+- `ARCHITECTURE_REVIEW.md` — Architecture analysis with Mermaid diagram, data flow, coupling, and boundaries.
+- `RISK_ASSESSMENT.md` — Top 5 risks with evidence and mitigation plans.
+
+## Architecture Review (Prompt 2)
+
+The completed Prompt 2 analysis is available in the `architecture_review/` directory:
+
+| Document | Description |
+| --- | --- |
+| `PROJECT_INVENTORY.md` | Inventory of all project files grouped by purpose, with dependencies and relationships. |
+| `ARCHITECTURE_REVIEW.md` | Architecture analysis covering components, data flow, Mermaid diagram, coupling, boundaries, and failure points.
+| `RISK_ASSESSMENT.md` | Top 5 risks with evidence from project files and detailed mitigation plans.
+
+All documents use evidence from the project files (`opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `memory_stress_test/*`, `README.md`, `LICENSE`) rather than assumptions.
 
 ## Usage
 
