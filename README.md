@@ -43,6 +43,14 @@ opencode_test/
 └── opencode_optimizer/  # Optimization artifacts (Prompt 3: completed)
     ├── proposed_config.json
     └── optimization_report.md
+└── local_web_dashboard/  # Web dashboard (Prompt 4: completed)
+    ├── README.md
+    ├── dashboard.py
+    ├── requirements.txt
+    ├── TEST_RESULTS.md
+    └── .venv/
+        └── Scripts/
+            └── python.exe
 ```
 
 ## Key Files
@@ -90,6 +98,13 @@ The completed Prompt 3 optimization artifacts:
 - `proposed_config.json` — Optimized configuration addressing startup, context, VRAM, and throughput.
 - `optimization_report.md` — Detailed recommendations with expected benefit, tradeoffs, implementation steps, and rollback procedures.
 
+### `local_web_dashboard/`
+The completed Prompt 4 web dashboard artifacts:
+- `dashboard.py` — Flask web application with real-time CPU/RAM/disk monitoring and Ollama server status. Supports validation tests via `dashboard.py --test`.
+- `requirements.txt` — Dependencies: Flask and psutil.
+- `TEST_RESULTS.md` — Validation test outcomes with all tests passing.
+- `README.md` — Dashboard documentation and usage guide.
+
 ## Architecture Review (Prompt 2)
 
 The completed Prompt 2 analysis is available in the `architecture_review/` directory:
@@ -112,6 +127,19 @@ The completed Prompt 3 refactoring optimization is available in the `opencode_op
 | `optimization_report.md` | Detailed recommendations with expected benefit, tradeoffs, implementation steps, and rollback procedures. |
 
 All recommendations are evidence-based, citing current project files (`opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `memory_stress_test/*`, `README.md`, `LICENSE`). No existing files are modified automatically.
+
+## Web Dashboard (Prompt 4)
+
+The completed Prompt 4 autonomous coding web dashboard is available in the `local_web_dashboard/` directory:
+
+| Document | Description |
+| --- | --- |
+| `dashboard.py` | Flask web application displaying real-time CPU, RAM, disk usage, and Ollama server status. Supports validation tests via `dashboard.py --test`. |
+| `requirements.txt` | Declares dependencies: Flask >= 3.0.0 and psutil >= 6.0.0. |
+| `TEST_RESULTS.md` | Validation test outcomes — all 5 tests passed with overall status all_passed. |
+| `README.md` | Dashboard documentation, API endpoints, and usage guide. |
+
+All validation tests passed, including system metrics collection, Ollama server status check, and API endpoint accessibility. The web server starts and serves the dashboard correctly on port 5000.
 
 ## Usage
 
