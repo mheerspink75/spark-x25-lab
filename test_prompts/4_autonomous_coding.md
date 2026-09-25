@@ -1,4 +1,4 @@
-Create a new directory named local_web_dashboard.
+Create a new directory named prompt4_local_web_dashboard.
 
 Within that directory:
 

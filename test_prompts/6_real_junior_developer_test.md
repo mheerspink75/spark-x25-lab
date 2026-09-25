@@ -1,4 +1,4 @@
-Create a new project directory called github_issue_triage.
+Create a new project directory called prompt6_github_issue_triage.
 
 Build a Python application that:
 

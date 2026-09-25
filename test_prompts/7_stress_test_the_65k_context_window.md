@@ -7,8 +7,8 @@ Critical constraints:
 
 1. Always respond and write files in English.
 2. Do not modify, rename, move, or delete any existing file or directory.
-3. Create exactly one new directory named comprehensive_audit.
-4. Write every generated artifact inside comprehensive_audit.
+3. Create exactly one new directory named prompt7_comprehensive_audit.
+4. Write every generated artifact inside prompt7_comprehensive_audit.
 5. Do not install packages or alter the system configuration.
 6. Do not expose secrets, credentials, API keys, tokens, or private data.
 7. Do not invent findings. Clearly label anything that cannot be verified.
@@ -31,7 +31,7 @@ Ignore generated or irrelevant content unless needed to support a finding, inclu
 - generated benchmark output
 - large log files that are not relevant to the audit
 
-Create these files inside comprehensive_audit:
+Create these files inside prompt7_comprehensive_audit:
 
 1. PROJECT_INVENTORY.md
 2. CODE_QUALITY.md
@@ -117,7 +117,7 @@ Create a checklist covering:
 - English-only output
 - read-only handling of existing files
 - exactly one new directory
-- all outputs stored in comprehensive_audit
+- all outputs stored in prompt7_comprehensive_audit
 - no invented findings
 - evidence supplied for conclusions
 - no secret values reproduced
@@ -145,7 +145,7 @@ Requirements for AUDIT_SUMMARY.md:
 Execution procedure:
 
 1. Inspect the project structure.
-2. Create comprehensive_audit.
+2. Create prompt7_comprehensive_audit.
 3. Analyze relevant files in logical groups.
 4. Track evidence and file paths while analyzing.
 5. Generate the nine required Markdown files.

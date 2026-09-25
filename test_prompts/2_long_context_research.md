@@ -2,7 +2,7 @@ Analyze every markdown, json, shell, and configuration file in this project.
 
 Do not modify any files.
 
-Create a new directory named architecture_review.
+Create a new directory named prompt2_architecture_review.
 
 Generate:
 

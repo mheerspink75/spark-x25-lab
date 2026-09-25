@@ -1,6 +1,6 @@
 # Compliance Audit Report
 
-**Input CSV:** `\\wsl$\Ubuntu\home\matt_heerspink\spark\opencode_test\compliance_test\sample_data.csv`
+**Input CSV:** `\\wsl$\Ubuntu\home\matt_heerspink\spark\spark_x25_4b_test_lab\prompt5_compliance_test\sample_data.csv`
 
 ## Overall Status
 

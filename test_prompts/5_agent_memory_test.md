@@ -5,7 +5,7 @@ Remember these requirements throughout the task:
 - Use type hints in all Python functions.
 - Use logging instead of print statements.
 
-Create a new directory called compliance_test.
+Create a new directory called prompt5_compliance_test.
 
 Inside it create five Python modules that work together to process CSV files.
 

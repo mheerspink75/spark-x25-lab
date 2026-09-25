@@ -1,4 +1,4 @@
-Create a new directory named memory_stress_test.
+Create a new directory named prompt1_memory_stress_test.
 
 Do not modify any existing files outside this directory.
 

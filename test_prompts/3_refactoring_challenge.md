@@ -1,4 +1,4 @@
-Create a new directory named opencode_optimizer.
+Create a new directory named prompt3_opencode_optimizer.
 
 Do not modify existing project files.
 

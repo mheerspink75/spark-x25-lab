@@ -1,7 +1,7 @@
 # Memory Stress Test — Benchmark Report
 
-**Project:** `memory_stress_test`
-**Location:** `test_prompts/memory_stress_test/`
+**Project:** `Spark-X2.5-4B Test Lab`
+**Location:** `prompt1_memory_stress_test/`
 **Date:** 2026-09-24
 **Language/Priority:** English only
 
@@ -112,7 +112,7 @@ All graphs are generated in `.benchmark_results/graphs/` and are auto-generated 
 | `multithreaded_performance.png`           | Multithreaded performance over time  |
 | `summary_comparison.png`                  | Bar chart comparing all metrics       |
 
-**Path:** `test_prompts/memory_stress_test/.benchmark_results/graphs/`
+**Path:** `prompt1_memory_stress_test/.benchmark_results/graphs/`
 
 ### 3.1 Interpretation of Graphs
 
@@ -173,7 +173,7 @@ The **secondary variance** in file I/O performance (0.0163s vs. 0.0018s average)
 
 ## 6. Executive Summary
 
-The `memory_stress_test` benchmark successfully executed multi-dimensional resource stress testing under controlled conditions (4 CPU cores, 16 MB memory, 4 threads, 3 iterations). Key findings:
+The `prompt1_memory_stress_test` benchmark successfully executed
 
 - **Memory stress is the primary bottleneck**, requiring 88.19 seconds due to large concurrent memory access under page-thrashing conditions.
 - **File I/O performance is efficient** (avg ~0.0019 s per iteration) with transient scheduling variance that should be monitored.

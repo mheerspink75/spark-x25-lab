@@ -15,7 +15,7 @@ import logging
 from typing import List, Dict, Any
 
 # Configure logging for this module.
-logger = logging.getLogger("compliance_test.csv_reporter")
+logger = logging.getLogger("prompt5_compliance_test.csv_reporter")
 if not logger.handlers:
     logging.basicConfig(
         level=logging.INFO,

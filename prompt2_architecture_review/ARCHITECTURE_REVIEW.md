@@ -1,6 +1,6 @@
 # Architecture Review
 
-This document provides a comprehensive architecture analysis of the OpenCode Test Project workspace, covering system components, data flow, configuration interaction, and architectural coupling. All evidence is drawn from the actual project files.
+This document provides a comprehensive architecture analysis of the Spark-X2.5-4B Test Lab workspace, covering system components, data flow, configuration interaction, and architectural coupling. All evidence is drawn from the actual project files.
 
 ## System Overview
 
@@ -10,7 +10,7 @@ The system consists of three interacting layers:
 
 1. **Configuration Layer** — Defines the model, provider, context window, and prediction limits via `opencode.json` and `assistant-settings.md`.
 2. **Orchestration Layer** — Provides `run.sh`, a bash launcher that manages Ollama server lifecycle, model validation, and OpenCode execution.
-3. **Test & Benchmark Layer** — Contains `test_prompts/` directory with sequential prompt files for agent evaluation, and `memory_stress_test/` with a performance benchmark application.
+3. **Test & Benchmark Layer** — Contains `test_prompts/` directory with sequential prompt files for agent evaluation, and `prompt1_memory_stress_test/` with a performance benchmark application.
 
 ## Components and Data Flow
 
@@ -22,13 +22,13 @@ The system consists of three interacting layers:
 | Configuration | `assistant-settings.md` | Sets language lock (English-only) and response policy with priority over other preferences. |
 | Launcher | `run.sh` | Validates prerequisites, starts/starts Ollama server, verifies model availability, runs health check, launches OpenCode. |
 | Test Prompts | `test_prompts/*.md` | Sequential agent evaluation prompts (1–7) and benchmark specifications. |
-| Benchmark | `test_prompts/memory_stress_test/benchmark.py` | Measures CPU, memory, file I/O, and multithreaded performance under controlled stress. |
-| Benchmark Dependencies | `test_prompts/memory_stress_test/requirements.txt` | Declares `numpy` and `matplotlib` with minimum version constraints. |
-| Benchmark Report | `test_prompts/memory_stress_test/REPORT.md` | Documents methodology, results, bottleneck analysis, and recommendations. |
+| Benchmark | `prompt1_memory_stress_test/benchmark.py` | Measures CPU, memory, file I/O, and multithreaded performance under controlled stress. |
+| Benchmark Dependencies | `prompt1_memory_stress_test/requirements.txt` | Declares `numpy` and `matplotlib` with minimum version constraints. |
+| Benchmark Report | `prompt1_memory_stress_test/REPORT.md` | Documents methodology, results, bottleneck analysis, and recommendations. |
 | Infrastructure | `.gitignore` | Constrains git tracking of generated artifacts, caches, logs, and editor files. |
 | Logging | `ollama.log` | Captures Ollama server output during launch and health checks. |
 | License | `LICENSE` | MIT License for project use and distribution. |
-| Project Inventory | `architecture_review/PROJECT_INVENTORY.md` | Inventory of all files grouped by purpose with dependencies. |
+| Project Inventory | `prompt2_architecture_review/PROJECT_INVENTORY.md` | Inventory of all files grouped by purpose with dependencies. |
 
 ### Data Flow
 
@@ -71,7 +71,7 @@ graph TB
     subgraph Test_And_Benchmark["Test & Benchmark Layer"]
         direction TB
         TEST_PROMPTS["test_prompts/<br/>Sequential Prompts 1-7"]
-        BENCHMARK_DIR["test_prompts/memory_stress_test/"]
+        BENCHMARK_DIR["prompt1_memory_stress_test/"]
         BENCHMARK["benchmark.py<br/>Performance Benchmark"]
         REPORT["REPORT.md<br/>Benchmark Report"]
     end
@@ -94,7 +94,7 @@ graph TB
     BENCHMARK -.deps.-> REQ["requirements.txt<br/>numpy, matplotlib"]
     GITIGNORE -.constrains.-> RUNSH
     LICENSE -.supports.-> OPENCODEJSON
-    PROJECT_INVENTORY["PROJECT_INVENTORY.md<br/>architecture_review/"]
+    PROJECT_INVENTORY["PROJECT_INVENTORY.md<br/>prompt2_architecture_review/"]
 ```
 
 ## Coupling and Boundaries
@@ -114,7 +114,7 @@ graph TB
 
 - **Orchestration vs. Test Layer:** `run.sh` is the sole entry point for OpenCode execution and server management, creating a clean boundary between infrastructure and test/benchmark workflows.
 - **Configuration vs. Execution:** The configuration layer (`opencode.json`, `assistant-settings.md`) is decoupled from runtime logic — changes to config require re-invocation of `run.sh`.
-- **Benchmark Isolation:** The `memory_stress_test/` directory is self-contained, with its own requirements and report, isolating benchmark execution from the main project.
+- **Benchmark Isolation:** The `prompt1_memory_stress_test/` directory is self-contained, with its own requirements and report, isolating benchmark execution from the main project.
 - **Read-Only Audit Scope:** Prompt 7 (stress test) enforces a strict read-only boundary, preventing accidental modification of existing files — a boundary that constrains agent behavior.
 
 ### Potential Failure Points
@@ -135,4 +135,4 @@ graph TB
 
 ---
 
-*Document generated as part of Prompt 2 (Long Context Research) — Architecture Review. All evidence cited from project files: `opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `test_prompts/memory_stress_test/*`, `README.md`, `LICENSE`.*
+*Document generated as part of Prompt 2 (Long Context Research) — Architecture Review. All evidence cited from project files: `opencode.json`, `run.sh`, `assistant-settings.md`, `.gitignore`, `test_prompts/*`, `prompt1_memory_stress_test/*`, `README.md`, `LICENSE`.*

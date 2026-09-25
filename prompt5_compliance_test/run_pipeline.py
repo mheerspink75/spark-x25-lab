@@ -38,7 +38,7 @@ def run_pipeline(csv_path: str) -> Dict[str, Any]:
     Returns:
         The final compliance report dictionary from the reporter.
     """
-    logger = logging.getLogger("compliance_test.pipeline")
+    logger = logging.getLogger("prompt5_compliance_test.pipeline")
 
     # Step 1: Read the CSV file.
     logger.info("=== Step 1: Reading CSV file ===")
@@ -72,7 +72,7 @@ def main() -> None:
     """Run the pipeline with the sample CSV file and generate the audit."""
     csv_path = str(Path(__file__).parent / "sample_data.csv")
 
-    logger = logging.getLogger("compliance_test.pipeline")
+    logger = logging.getLogger("prompt5_compliance_test.pipeline")
     logger.info("Starting compliance test pipeline.")
 
     report = run_pipeline(csv_path)

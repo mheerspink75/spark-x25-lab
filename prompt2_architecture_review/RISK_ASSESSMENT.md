@@ -1,6 +1,6 @@
 # Risk Assessment
 
-This document identifies the top five risks in the OpenCode Test Project workspace, with detailed evidence from project files and actionable mitigation plans. All findings are based on direct evidence from the project's configuration, scripts, prompts, and benchmark files.
+This document identifies the top five risks in the Spark-X2.5-4B Test Lab workspace, with detailed evidence from project files and actionable mitigation plans. All findings are based on direct evidence from the project's configuration, scripts, prompts, and benchmark files.
 
 ## Risk Summary
 
@@ -113,7 +113,7 @@ The test prompts in `test_prompts/` are designed for sequential OpenCode executi
 - **`test_prompts/3_refactoring_challenge.md`:** States "Do not modify existing project files" and requires creating new directories only.
 - **`test_prompts/4_autonomous_coding.md`:** States "Do not modify files outside this directory."
 - **`test_prompts/7_stress_test_the_65k_context_window.md`:** Enforces "Do not modify, rename, move, or delete any existing file or directory" and "Verify that no pre-existing files changed."
-- **`architecture_review/PROJECT_INVENTORY.md`:** Notes test prompt coherence with sequential execution on the same workspace.
+- **`prompt2_architecture_review/PROJECT_INVENTORY.md`:** Notes test prompt coherence with sequential execution on the same workspace.
 
 ### Impact
 
@@ -138,7 +138,7 @@ The system runs two resource-intensive components concurrently: the `run.sh` lau
 ### Evidence
 
 - **`run.sh`:** Starts `ollama serve` in the background, polls the server, and uses CPU-intensive model health checks.
-- **`test_prompts/memory_stress_test/benchmark.py`:** Uses `THREAD_COUNT = 4` and `CPU_CORES = 4`, performing multithreaded memory stress and CPU benchmarks.
+- **`prompt1_memory_stress_test/benchmark.py`:** Uses `THREAD_COUNT = 4` and `CPU_CORES = 4`, performing multithreaded memory stress and CPU benchmarks.
 - **`opencode.json`:** Configures 65536 context window and 512 prediction, which also consume resources during execution.
 - **`requirements.txt`:** Declares `numpy` and `matplotlib` as dependencies, which have memory overhead.
 
@@ -172,4 +172,4 @@ The top risk is **Shell Command Injection in `run.sh`** (Critical), due to unsaf
 
 ---
 
-*Document generated as part of Prompt 2 (Long Context Research) — Risk Assessment. Evidence cited from: `run.sh`, `opencode.json`, `assistant-settings.md`, `test_prompts/*.md`, `test_prompts/memory_stress_test/benchmark.py`, `requirements.txt`, `README.md`, `architecture_review/PROJECT_INVENTORY.md`.*
+*Document generated as part of Prompt 2 (Long Context Research) — Risk Assessment. Evidence cited from: `run.sh`, `opencode.json`, `assistant-settings.md`, `test_prompts/*.md`, `prompt1_memory_stress_test/benchmark.py`, `requirements.txt`, `README.md`, `prompt2_architecture_review/PROJECT_INVENTORY.md`.*

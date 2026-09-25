@@ -17,22 +17,22 @@ This document inventory-lists every relevant file in the project, grouped by pur
 
 | File | Purpose |
 | --- | --- |
-| `test_prompts/1_software_engineering_agent.md` | Specifies creating and completing a memory stress test benchmark directory with executable code, graphs, report, and requirements. |
+| `test_prompts/1_software_engineering_agent.md` | Specifies creating and completing a `prompt1_memory_stress_test` directory with executable code, graphs, report, and requirements. |
 | `test_prompts/2_long_context_research.md` | This analysis prompt: analyzes all project files (markdown, JSON, shell, config) and produces an architecture review. |
-| `test_prompts/3_refactoring_challenge.md` | Requires creating an `opencode_optimizer` directory with config and optimization artifacts (no auto-application). |
-| `test_prompts/4_autonomous_coding.md` | Generates a `local_web_dashboard` Flask app with CPU/RAM/disk/Ollama status display and validation tests. |
-| `test_prompts/5_agent_memory_test.md` | Creates a `compliance_test` directory with five CSV-processing Python modules and compliance audits. |
-| `test_prompts/6_real_junior_developer_test.md` | Builds a `github_issue_triage` app for issue categorization, stats, charts, and markdown reporting. |
+| `test_prompts/3_refactoring_challenge.md` | Requires creating a `prompt3_opencode_optimizer` directory with config and optimization artifacts (no auto-application). |
+| `test_prompts/4_autonomous_coding.md` | Generates a `prompt4_local_web_dashboard` Flask app with CPU/RAM/disk/Ollama status display and validation tests. |
+| `test_prompts/5_agent_memory_test.md` | Creates a `prompt5_compliance_test` directory with five CSV-processing Python modules and compliance audits. |
+| `test_prompts/6_real_junior_developer_test.md` | Builds a `prompt6_github_issue_triage` app for issue categorization, stats, charts, and markdown reporting. |
 | `test_prompts/7_stress_test_the_65k_context_window.md` | Read-only project audit stress-testing model's long-context comprehension and evidence tracking. |
 
-### Benchmark (memory_stress_test)
+### Benchmark (prompt1_memory_stress_test)
 
 | File | Purpose |
 | --- | --- |
-| `test_prompts/memory_stress_test/benchmark.py` | Python benchmark application that measures CPU, memory, file I/O, and multithreaded performance under controlled stress. |
-| `test_prompts/memory_stress_test/requirements.txt` | Lists dependencies: `matplotlib` and `numpy` with minimum version constraints. |
-| `test_prompts/memory_stress_test/REPORT.md` | Comprehensive benchmark report covering methodology, results, graphs, bottleneck analysis, recommendations, and executive summary. |
-| `test_prompts/memory_stress_test/.benchmark_results/` | Generated benchmark output including summary JSON, per-metric result JSONs, and 5 PNG graphs. |
+| `prompt1_memory_stress_test/benchmark.py` | Python benchmark application that measures CPU, memory, file I/O, and multithreaded performance under controlled stress. |
+| `prompt1_memory_stress_test/requirements.txt` | Lists dependencies: `matplotlib` and `numpy` with minimum version constraints. |
+| `prompt1_memory_stress_test/REPORT.md` | Comprehensive benchmark report covering methodology, results, graphs, bottleneck analysis, recommendations, and executive summary. |
+| `prompt1_memory_stress_test/.benchmark_results/` | Generated benchmark output including summary JSON, per-metric result JSONs, and 5 PNG graphs. |
 
 ## Relationships and Dependencies
 

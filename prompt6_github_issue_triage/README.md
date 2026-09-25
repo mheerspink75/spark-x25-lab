@@ -9,7 +9,7 @@ This project implements a modular, maintainable solution for issue triage. It re
 ## Directory Structure
 
 ```
-github_issue_triage/
+prompt6_github_issue_triage/
 ├── main.py                  # Entry point orchestrating the triage workflow
 ├── data/
 │   └── issues.json          # Sample issues data for testing (12 issues)
